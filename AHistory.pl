@@ -1,6 +1,9 @@
 #!/usr/bin/perl -w
 use Term::ANSIColor qw(:constants);
 
+($^O eq "darwin")
+    or die "Sorry, only Mac OS X supported.\n";
+
 open (LOGFILE, "<", "/var/log/system.log") 
     or die "Cannot open system log\n";
 
